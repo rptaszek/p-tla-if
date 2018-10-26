@@ -7,17 +7,10 @@ int main() {
     printf("Podaj a: ");
     scanf("%d", &a);
     for (int liczba = a; liczba >= 1; --liczba) {
-        if (liczba % 2) {
-            if (liczba % 3) {
-                if (liczba % 5) {
-                    if (liczba % 7) {
-                        printf("%d\n", liczba);
-                        break;
-                    }
-                }
-            }
+        if (liczba % 2 && liczba % 3 && liczba % 5 && liczba % 7) {
+            printf("%d\n", liczba);
+            break;
         }
     }
-
     return 0;
 }
